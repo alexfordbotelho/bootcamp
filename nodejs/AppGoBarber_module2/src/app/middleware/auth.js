@@ -4,5 +4,5 @@ module.exports = (req, res, next) => {
     return next();
   }
 
-  return res.render("/");
+  return res.redirect("/");
 };
