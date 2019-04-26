@@ -11,7 +11,6 @@ class AppointmentsController {
     const { id } = req.session.user;
     const { provider } = req.params;
     const { date } = req.body;
-    console.log(date);
 
     await Appointment.create({
       user_id: id,
@@ -19,6 +18,7 @@ class AppointmentsController {
       date
     });
 
+    req.flash("success", "Horario agendado com sucesso");
     return res.redirect("/app/dashboard");
   }
 }

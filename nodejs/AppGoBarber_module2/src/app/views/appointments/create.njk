@@ -4,17 +4,16 @@
     <strong>Agendamento horário</strong>
     <div class="provider">
       <div>
-        <img src="/files/{{ provider.avatar }}" />
+        <img src="/files/{{ provider.avatar }}"/>
         <strong>{{ provider.name }}</strong>
       </div>
     </div>
     <form action="/app/appointments/new/{{ provider.id }}" method="post">
       <input type="text" class="flatpickr" placeholder="Escolha uma data"/>
 
-      <div id="hours">
-
-      </div>
+      <div id="hours"></div>
       <button type="submit">Agendar</button>
+      <a href="/app/dashboard" class="button">Back to dashboard</a>
     </form>
   </div>
 
@@ -22,13 +21,16 @@
     flatpickr('.flatpickr', {
       minDate: new Date(),
       dateFormat: 'd/m/Y',
-      onChange: function(date){
-        fetch(`/app/available/{{ provider.id }}?date=${date[0].getTime()}`)
-          .then(function(response){
-            response.text().then(function(html){
-              document.getElementById('hours').innerHTML = html
+      onChange: function (date) {
+        fetch(`/app/available/{{ provider.id }}?date=${date[0].getTime()}`).then(function (response) {
+          response
+            .text()
+            .then(function (html) {
+              document
+                .getElementById('hours')
+                .innerHTML = html
             })
-          })
+        })
       }
     })
   </script>

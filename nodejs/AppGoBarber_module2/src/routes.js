@@ -12,6 +12,8 @@ const DashboardController = require("./app/controllers/DashboardController");
 const AppointmentsController = require("./app/controllers/AppointmentsController");
 const AvailableController = require("./app/controllers/AvailableController");
 
+const SchedulerController = require("./app/controllers/SchedulerController");
+
 const routes = express.Router();
 
 routes.use((req, res, next) => {
@@ -35,6 +37,8 @@ routes.get("/app/dashboard", DashboardController.index);
 routes.get("/app/appointments/new/:provider", AppointmentsController.create);
 routes.post("/app/appointments/new/:provider", AppointmentsController.store);
 routes.get("/app/available/:provider", AvailableController.index);
+
+routes.get("/app/scheduler", SchedulerController.index);
 
 routes.get("/app/logout", SessionController.destroy);
 

@@ -270,6 +270,7 @@ ul.providers {
 
 .main-wrapper .content form > input {
   width: 100%;
+  text-align: center;
 }
 
 .main-wrapper .content form button {
@@ -289,4 +290,96 @@ ul.providers {
 
 .main-wrapper .content form button:hover {
   background: #634dac;
+}
+
+.main-wrapper .content form .button {
+  text-decoration: none;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+  border: 0;
+  color: #fff;
+  background: #de6d6d;
+  margin-top: 5px;
+}
+
+.main-wrapper .content form .button:hover {
+  background: #de6d6d;
+}
+
+.main-wrapper .content .show-schedule {
+  text-decoration: none;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+  border: 0;
+  color: #fff;
+  background: #087829;
+  margin: 5px 0;
+}
+
+.main-wrapper .content .show-schedule:hover {
+  background: #087829;
+}
+
+ul.schedulers {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.scheduler {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.scheduler div {
+  display: flex;
+  align-items: center;
+}
+
+.scheduler img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.scheduler strong {
+  margin-left: 15px;
+  color: #444;
+}
+
+.main-wrapper .content .button {
+  text-decoration: none;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+  border: 0;
+  color: #fff;
+  background: #de6d6d;
+  margin: 5px 0;
+}
+
+.main-wrapper .content .button:hover {
+  background: #de6d6d;
 }
